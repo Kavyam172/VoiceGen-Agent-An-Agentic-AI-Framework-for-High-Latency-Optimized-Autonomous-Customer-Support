@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package bot;
+
+service BotService {
+  rpc GetResponse (BotRequest) returns (stream BotReply) {}
+}
+
+message BotRequest {
+  string text = 1;
+  string session_id = 2;
+}
+
+message BotReply {
+  string reply_text = 1;
+}
