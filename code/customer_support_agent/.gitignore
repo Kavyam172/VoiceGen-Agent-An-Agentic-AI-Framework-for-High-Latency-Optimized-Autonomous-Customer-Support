@@ -1,0 +1,61 @@
+# ============================================================
+# .gitignore — Customer Support AI Assistant
+# ============================================================
+
+# ----- Environment variables (NEVER commit real API keys) -----
+.env
+.env.local
+.env.*.local
+
+# ----- Python cache & compiled files -----
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+
+# ----- Virtual environments -----
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# ----- Distribution / packaging -----
+dist/
+build/
+*.egg-info/
+*.egg
+.eggs/
+
+# ----- Testing & coverage -----
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+*.cover
+.hypothesis/
+
+# ----- Jupyter Notebooks -----
+.ipynb_checkpoints/
+*.ipynb
+
+# ----- IDE / editor files -----
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ----- Logs -----
+*.log
+logs/
+
+# ----- Streamlit cache -----
+.streamlit/secrets.toml
+
+# ----- LangChain / LangSmith -----
+.langchain.db

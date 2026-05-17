@@ -1,0 +1,185 @@
+/*
+  styles.css - Custom CSS for the Customer Support AI Assistant Streamlit app.
+
+  Injected via st.markdown("<style>...</style>", unsafe_allow_html=True).
+  Targets Streamlit's internal DOM structure for clean overrides without
+  breaking the default theme.
+
+  Design goals:
+    - Clean, professional enterprise dashboard feel
+    - Proper spacing and hierarchy
+    - Subtle accent colours consistent with a telecom brand
+    - Readable typography
+*/
+
+/* -- Global resets --------------------------------------------------------- */
+* {
+  box-sizing: border-box;
+}
+
+/* -- App header ------------------------------------------------------------ */
+.app-header {
+  background: linear-gradient(135deg, #1a237e 0%, #283593 60%, #1565c0 100%);
+  color: #ffffff;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 16px rgba(26, 35, 126, 0.25);
+}
+
+.app-header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem 0;
+  letter-spacing: -0.5px;
+}
+
+.app-header p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  margin: 0;
+}
+
+.app-header .badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 20px;
+  padding: 2px 12px;
+  font-size: 0.78rem;
+  margin-top: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+/* -- Chat container -------------------------------------------------------- */
+.chat-container {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1rem;
+  min-height: 420px;
+  background: #fafafa;
+  overflow-y: auto;
+}
+
+/* -- User chat bubble ------------------------------------------------------ */
+[data-testid="stChatMessage"][data-role="user"] {
+  background: #e3f2fd;
+  border-radius: 12px;
+  border: 1px solid #bbdefb;
+}
+
+/* -- Assistant chat bubble ------------------------------------------------- */
+[data-testid="stChatMessage"][data-role="assistant"] {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #eeeeee;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+/* -- Sidebar styling ------------------------------------------------------- */
+[data-testid="stSidebar"] {
+  background: #f8f9fa;
+  border-right: 1px solid #e0e0e0;
+}
+
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #555;
+  margin-bottom: 0.4rem;
+}
+
+/* -- Example query buttons ------------------------------------------------- */
+[data-testid="stSidebar"] .stButton > button {
+  font-size: 0.82rem;
+  text-align: left;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background: #fff;
+  color: #333;
+  transition: background 0.15s ease, border-color 0.15s ease;
+  white-space: normal;
+  height: auto;
+  line-height: 1.3;
+}
+
+[data-testid="stSidebar"] .stButton > button:hover {
+  background: #e8eaf6;
+  border-color: #3f51b5;
+  color: #1a237e;
+}
+
+/* -- Chat input ------------------------------------------------------------ */
+[data-testid="stChatInput"] textarea {
+  border-radius: 24px !important;
+  border: 2px solid #c5cae9 !important;
+  transition: border-color 0.2s ease !important;
+}
+
+[data-testid="stChatInput"] textarea:focus {
+  border-color: #3f51b5 !important;
+  box-shadow: 0 0 0 3px rgba(63, 81, 181, 0.12) !important;
+}
+
+/* -- Metric cards ---------------------------------------------------------- */
+[data-testid="stMetric"] {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+}
+
+[data-testid="stMetricLabel"] {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: #666;
+}
+
+[data-testid="stMetricValue"] {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a237e;
+}
+
+/* -- Expander -------------------------------------------------------------- */
+[data-testid="stExpander"] {
+  border: 1px solid #e8eaf6;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+/* -- Divider --------------------------------------------------------------- */
+hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 0.75rem 0;
+}
+
+/* -- Code blocks (tool output) --------------------------------------------- */
+pre, code {
+  font-size: 0.78rem !important;
+}
+
+/* -- Scrollbar ------------------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c5cae9;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7986cb;
+}

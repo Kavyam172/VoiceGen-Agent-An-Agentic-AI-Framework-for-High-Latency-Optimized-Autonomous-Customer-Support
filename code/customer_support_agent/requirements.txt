@@ -1,0 +1,32 @@
+# ============================================================
+# LangGraph Customer Support Assistant — Dependencies
+# ============================================================
+
+# Core LangChain / LangGraph
+langchain>=0.2.0
+langchain-core>=0.2.0
+langchain-openai>=0.1.0
+langgraph>=0.2.0
+
+# OpenAI SDK
+openai>=1.30.0
+
+# Streamlit frontend
+streamlit>=1.35.0
+
+# Environment variable management
+python-dotenv>=1.0.0
+
+# Pydantic for data validation and settings
+pydantic>=2.7.0
+pydantic-settings>=2.2.0
+
+# HTTP client (used internally by openai / langchain)
+httpx>=0.27.0
+
+# Testing
+pytest>=8.2.0
+pytest-asyncio>=0.23.0
+
+# Utilities
+tenacity>=8.3.0
